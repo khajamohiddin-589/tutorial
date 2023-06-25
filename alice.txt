@@ -1,4 +1,1 @@
-how are you?
-My name is khaja Mohiddin
-Im passionate to learn new technologies.
-Currently learning git.
+Bye
