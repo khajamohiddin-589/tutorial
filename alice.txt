@@ -1,1 +1,24 @@
-Bye
+SELECT 
+    MGR.SALESREP_NAME AS MANAGER_NAME,
+    MGR.SALARY AS MANAGER_SALARY
+FROM 
+    SALESREP MGR
+WHERE 
+    MGR.SALARY > (
+        SELECT 
+            AVG(EMP.SALARY)
+        FROM 
+            SALESREP EMP
+        WHERE 
+            EMP.MGR = MGR.SALESREP_ID
+    );
+
+
+52)SELECT 
+    A.SALESREP_NAME || ' works for ' || B.SALESREP_NAME AS REPORT
+FROM 
+    SALESREP A
+JOIN 
+    SALESREP B
+ON 
+    A.MGR = B.SALESREP_ID;
